@@ -327,22 +327,22 @@ public class WrapperPlayServerScoreboardTeam extends AbstractPacket {
     @NotNull
     @SuppressWarnings("unused")
     public TeamPush getTeamPush() {
-        return TeamPush.valueOf(handle.getStrings().read(1));
+        return TeamPush.valueOf(handle.getStrings().read(2));
     }
 
     @SuppressWarnings("unused")
     public void setTeamPush(@NotNull TeamPush value) {
-        handle.getStrings().write(1, value.toString());
+        handle.getStrings().write(2, value.toString());
     }
 
     @NotNull
     @SuppressWarnings("unused")
     public NameTagVisibility getNameTagVisibility() {
-        return NameTagVisibility.valueOf(handle.getStrings().read(2));
+        return NameTagVisibility.valueOf(handle.getStrings().read(1));
     }
 
     @SuppressWarnings("unused")
     public void setNameTagVisibility(@NotNull NameTagVisibility value) {
-        handle.getStrings().write(2, value.toString());
+        handle.getStrings().write(1, value.toString());
     }
 }
